@@ -1,8 +1,8 @@
 import React from 'react'
 
-const CityName = () => {
+const CityName = ({city, ...props}) => {
     return (
-        <h1>Perth</h1>
+        <h1>{city}</h1>
     )
 }
 

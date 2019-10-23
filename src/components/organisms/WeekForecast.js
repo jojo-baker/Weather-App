@@ -1,16 +1,20 @@
 import React from 'react';
-import DayWeather from '../molecules/DayWeather';
+import DailyWeather from '../molecules/DailyWeather';
+import TimeSlider from './TimeSlider'
 
-const WeekForecast = () => {
+const WeekForecast = ({day,icon, ...props}) => {
     return (
         <div>
+            <h3>Today:</h3>
+            <DailyWeather day={day} icon={icon} />
+            <TimeSlider />
             <h3>Upcoming:</h3>
-            <DayWeather />
-            <DayWeather />
-            <DayWeather />
-            <DayWeather />
-            <DayWeather />
-            <DayWeather />
+            <DailyWeather day={day} icon={icon} />
+            <DailyWeather day={day} icon={icon} />
+            <DailyWeather day={day} icon={icon} />
+            <DailyWeather day={day} icon={icon} />
+            <DailyWeather day={day} icon={icon} />
+            <DailyWeather day={day} icon={icon} />
         </div>
     )
 }

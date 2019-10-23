@@ -1,8 +1,8 @@
 import React from 'react'
 
-const WPBio = () => {
+const WPBio = ({bio, ...props}) => {
     return (
-        <div>Weather Person Bio</div>
+        <div>{bio}</div>
     )
 }
 

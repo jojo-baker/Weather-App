@@ -1,8 +1,8 @@
 import React from 'react'
 
-const WPName = () => {
+const WPName = ({firstname, lastname, ...props}) => {
     return (
-        <div>Weather Person Name</div>
+        <div>{firstname} {lastname}</div>
     )
 }
 

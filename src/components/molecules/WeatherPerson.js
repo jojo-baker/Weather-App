@@ -3,12 +3,12 @@ import WPName from '../atoms/WPName';
 import WPBio from '../atoms/WPBio';
 import WPAvatar from '../atoms/WPAvatar';
 
-const WeatherPerson = () => {
+const WeatherPerson = ({firstname, lastname, bio, avatar, ...props}) => {
     return (
         <div>
-            <WPName />
-            <WPBio />
-            <WPAvatar />
+            <WPName firstname={firstname} lastname={lastname}/>
+            <WPBio  bio={bio}/>
+            <WPAvatar avatar={avatar}/>
         </div>
     )
 }

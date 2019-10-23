@@ -1,8 +1,8 @@
 import React from 'react'
 
-const WeekDay = () => {
+const WeekDay = ({day, ...props}) => {
     return (
-        <div>Wednesday</div>
+        <div>{day}</div>
     )
 }
 

@@ -1,19 +1,19 @@
 import React from 'react';
-import BiHourlyUpdate from '../molecules/BiHourlyUpdate';
+import HourlyUpdate from '../molecules/HourlyUpdate';
 
 const TimeSlider = () => {
     return (
         <div>
-            <BiHourlyUpdate />
-            <BiHourlyUpdate />
-            <BiHourlyUpdate />
-            <BiHourlyUpdate />
-            <BiHourlyUpdate />
-            <BiHourlyUpdate />
-            <BiHourlyUpdate />
-            <BiHourlyUpdate />
-            <BiHourlyUpdate />
-            <BiHourlyUpdate />
+            <HourlyUpdate />
+            <HourlyUpdate />
+            <HourlyUpdate />
+            <HourlyUpdate />
+            <HourlyUpdate />
+            <HourlyUpdate />
+            <HourlyUpdate />
+            <HourlyUpdate />
+            <HourlyUpdate />
+            <HourlyUpdate />
         </div>
     )
 }

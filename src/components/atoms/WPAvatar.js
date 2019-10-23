@@ -1,8 +1,8 @@
 import React from 'react'
 
-const WPAvatar = () => {
+const WPAvatar = ({avatar, ...props}) => {
     return (
-        <image src="#" />
+        <img src={avatar} alt="weather person profile"/>
     )
 }
 

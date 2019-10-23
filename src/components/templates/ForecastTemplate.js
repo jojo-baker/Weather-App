@@ -1,17 +1,15 @@
 import React from 'react';
 import CurrentWeather from '../molecules/CurrentWeather';
-import DayWeather from '../molecules/DayWeather';
-import TimeSlider from '../organisms/TimeSlider';
+import DailyWeather from '../molecules/DailyWeather';
 import WeekForecast from '../organisms/WeekForecast';
 import ComplaintLink from '../atoms/ComplaintLink';
 
-const ForecastTemplate = () => {
+const ForecastTemplate = ({city, day, icon, ...props}) => {
     return (
         <div>
-            <CurrentWeather />
-            <DayWeather />
-            <TimeSlider />
-            <WeekForecast />
+            <CurrentWeather city={city} />
+            <DailyWeather day={day}/>
+            <WeekForecast day={day} icon={icon}/>
             <ComplaintLink />
         </div>
     )
