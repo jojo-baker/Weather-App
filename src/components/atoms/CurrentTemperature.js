@@ -1,8 +1,8 @@
 import React from 'react'
 
-const CurrentTemperature = ({temperture, ...props}) => {
+const CurrentTemperature = ({temperature, ...props}) => {
     return (
-        <div>2{temperture}</div>
+        <div>{temperature}</div>
     )
 }
 

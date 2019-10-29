@@ -1,19 +1,19 @@
 import React from 'react';
 import HourlyUpdate from '../molecules/HourlyUpdate';
 
-const TimeSlider = () => {
+const TimeSlider = ({icon, time, temperature, ...props}) => {
     return (
         <div>
-            <HourlyUpdate />
-            <HourlyUpdate />
-            <HourlyUpdate />
-            <HourlyUpdate />
-            <HourlyUpdate />
-            <HourlyUpdate />
-            <HourlyUpdate />
-            <HourlyUpdate />
-            <HourlyUpdate />
-            <HourlyUpdate />
+            <HourlyUpdate time={time} icon={icon} temperature={temperature} />
+            <HourlyUpdate time={time} icon={icon} temperature={temperature} />
+            <HourlyUpdate time={time} icon={icon} temperature={temperature} />
+            <HourlyUpdate time={time} icon={icon} temperature={temperature} />
+            <HourlyUpdate time={time} icon={icon} temperature={temperature} />
+            <HourlyUpdate time={time} icon={icon} temperature={temperature} />
+            <HourlyUpdate time={time} icon={icon} temperature={temperature} />
+            <HourlyUpdate time={time} icon={icon} temperature={temperature} />
+            <HourlyUpdate time={time} icon={icon} temperature={temperature} />
+            <HourlyUpdate time={time} icon={icon} temperature={temperature} />
         </div>
     )
 }

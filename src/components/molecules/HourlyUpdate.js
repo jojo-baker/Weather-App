@@ -1,13 +1,15 @@
 import React from 'react';
 import WeatherIcon from '../atoms/WeatherIcon';
 
-const HourlyUpdate = ({icon, ...props}) => {
+const HourlyUpdate = ({icon, temperature, time, ...props}) => {
     return (
+        <>
         <ul>
-           <li>6am</li>
+           <li>{time}</li>
            <li><WeatherIcon icon={icon}/></li>
-           <li>temp</li>
+           <li>{temperature}</li>
         </ul>
+        </>
     )
 }
 

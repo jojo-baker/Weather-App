@@ -4,12 +4,12 @@ import ChangeButton from '../atoms/ChangeButton';
 import CurrentTemperature from '../atoms/CurrentTemperature';
 import RandoBox from '../atoms/RandoBox';
 
-const CurrentWeather = ({city, ...props}) => {
+const CurrentWeather = ({city, temperature, onTextLinkClick, ...props}) => {
     return (
         <div>
             <CityName city={city}/>
-            <ChangeButton />
-            <CurrentTemperature />
+            <ChangeButton onButtonClick={onTextLinkClick}>Change City</ChangeButton>
+            <CurrentTemperature temperature={temperature} />
             <RandoBox />
         </div>
     );

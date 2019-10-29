@@ -1,8 +1,10 @@
 import React from 'react';
 
-const ChangeButton  = () => {
+const ChangeButton  = ({onButtonClick, ...props}) => {
     return (
-      <button>Change City</button>
+      <div>
+        <button onClick={onButtonClick}>{props.children}</button>
+      </div>
     )
 };
 
