@@ -1,13 +1,13 @@
 import React from 'react';
 import CurrentWeather from '../molecules/CurrentWeather';
 
-const PageTemplate = ({ city, temperature, ...props }) => {
+const PageTemplate = ({ city, temperature, changeCity, ...props }) => {
   return (
     <div>
       <CurrentWeather
         city={city}
         temperature={temperature}
-        // ChangeButton={changeCity}
+        onTextLinkClick={changeCity}
       />
       {props.children}
     </div>

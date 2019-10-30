@@ -1,11 +1,11 @@
 import React from 'react';
 
-const ChangeButton  = ({onButtonClick, ...props}) => {
+const TextLink = ({ onButtonClick, ...props }) => {
     return (
       <div>
         <button onClick={onButtonClick}>{props.children}</button>
       </div>
-    )
-};
+    );
+  };
 
-export default ChangeButton;
+export default TextLink;

@@ -11,7 +11,7 @@ class AppContainer extends Component {
       super(props);
   
       this.state = {
-        city: CITIES[0],
+        city: CITIES[3],
         temperature: CURRENT_WEATHER.main.temp,
         forecast: HOURLY_FORECAST.list
       };

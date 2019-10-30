@@ -1,6 +1,6 @@
 import React from 'react';
 import CityName from '../atoms/CityName';
-import ChangeButton from '../atoms/ChangeButton';
+import TextLink from '../atoms/TextLink';
 import CurrentTemperature from '../atoms/CurrentTemperature';
 import RandoBox from '../atoms/RandoBox';
 
@@ -8,7 +8,7 @@ const CurrentWeather = ({city, temperature, onTextLinkClick, ...props}) => {
     return (
         <div>
             <CityName city={city}/>
-            <ChangeButton onButtonClick={onTextLinkClick}>Change City</ChangeButton>
+            <TextLink onButtonClick={onTextLinkClick}>Change City</TextLink>
             <CurrentTemperature temperature={temperature} />
             <RandoBox />
         </div>

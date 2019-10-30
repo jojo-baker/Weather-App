@@ -7,7 +7,7 @@ import { chunkify } from '../utils';
 import { Link } from 'react-router-dom';
 
 
-const WeatherPage = ({city, icon, temperature, forecast, ...props}) => {
+const WeatherPage = ({city, icon, temperature, changeCity, forecast, ...props}) => {
       // Take forecast and split into equal chunks for each day.
     const chunkedForecast = chunkify(forecast, forecast.length / 1);
     
@@ -22,7 +22,7 @@ const WeatherPage = ({city, icon, temperature, forecast, ...props}) => {
     
     return (
         <div>
-            <PageTemplate city={city} temperature={temperature} />
+            <PageTemplate city={city} temperature={temperature} changeCity={changeCity}/>
             {chunkedForecast.map((day, i) => (
                 <Fragment key={i}>
                     <DailyWeather 
