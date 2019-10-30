@@ -4,6 +4,7 @@ import DailyWeather from '../components/molecules/DailyWeather';
 import WeekForecast from '../components/organisms/WeekForecast';
 import ComplaintLink from '../components/atoms/ComplaintLink';
 import { chunkify } from '../utils';
+import { Link } from 'react-router-dom';
 
 
 const WeatherPage = ({city, icon, temperature, forecast, ...props}) => {
@@ -46,7 +47,7 @@ const WeatherPage = ({city, icon, temperature, forecast, ...props}) => {
                 </Fragment>
             ))
             };
-            <ComplaintLink />
+            <Link to="/complain"><ComplaintLink /></Link>
         </div>
     )
 }

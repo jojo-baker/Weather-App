@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { CURRENT_WEATHER, HOURLY_FORECAST } from '../data/mockWeather';
 import ComplaintPage from '../pages/ComplaintPage';
 import WeatherPage from '../pages/WeatherPage';
+import { Route } from 'react-router-dom';
 
 const CITIES = ['London', 'Paris', 'Perth', 'Tokyo', 'Sydney'];
 
@@ -29,16 +30,28 @@ class AppContainer extends Component {
     render() {
       return (
         <>
-          <WeatherPage
-            city={this.state.city}
-            temperature={this.state.temperature}
-            forecast={this.state.forecast}
-            changeCity={this.changeCity}
+          <Route path="/" component={() => {
+            return (
+            <WeatherPage
+              city={this.state.city}
+              temperature={this.state.temperature}
+              forecast={this.state.forecast}
+              changeCity={this.changeCity}
+            />
+            );
+          }}
+          exact
           />
-          <ComplaintPage
-            city={this.state.city}
-            temperature={this.state.temperature}
-            changeCity={this.changeCity}
+          <Route path="/complain" component={() => {
+            return (
+            <ComplaintPage
+              city={this.state.city}
+              temperature={this.state.temperature}
+              changeCity={this.changeCity}
+            />
+            );
+          }}
+          exact
           />
         </>
       );
