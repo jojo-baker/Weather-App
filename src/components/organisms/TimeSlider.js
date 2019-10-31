@@ -5,15 +5,7 @@ const TimeSlider = ({icon, time, temperature, ...props}) => {
     return (
         <div>
             <HourlyUpdate time={time} icon={icon} temperature={temperature} />
-            <HourlyUpdate time={time} icon={icon} temperature={temperature} />
-            <HourlyUpdate time={time} icon={icon} temperature={temperature} />
-            <HourlyUpdate time={time} icon={icon} temperature={temperature} />
-            <HourlyUpdate time={time} icon={icon} temperature={temperature} />
-            <HourlyUpdate time={time} icon={icon} temperature={temperature} />
-            <HourlyUpdate time={time} icon={icon} temperature={temperature} />
-            <HourlyUpdate time={time} icon={icon} temperature={temperature} />
-            <HourlyUpdate time={time} icon={icon} temperature={temperature} />
-            <HourlyUpdate time={time} icon={icon} temperature={temperature} />
+
         </div>
     )
 }

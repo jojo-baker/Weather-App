@@ -9,7 +9,9 @@ import { Link } from 'react-router-dom';
 
 const WeatherPage = ({city, icon, temperature, changeCity, forecast, ...props}) => {
       // Take forecast and split into equal chunks for each day.
-    const chunkedForecast = chunkify(forecast, forecast.length / 1);
+      console.log('forecast', forecast);
+    const chunkedForecast = chunkify(forecast, forecast.length / 5);
+    console.log('chunked', chunkedForecast);
     
       // Get highest temp from forecast chunk
     const getMaxTemp = array =>
@@ -25,8 +27,10 @@ const WeatherPage = ({city, icon, temperature, changeCity, forecast, ...props}) 
             <PageTemplate city={city} temperature={temperature} changeCity={changeCity}/>
             {chunkedForecast.map((day, i) => (
                 <Fragment key={i}>
-                    <DailyWeather 
-                    date={day[0].dt} 
+                    <WeekForecast
+                    time='6am'
+                    temperature={temperature}
+                    day={day[0].dt} 
                     icon={day[0].weather[0].icon}
                     maxTemp={getMaxTemp(day).main.temp}
                     minTemp={getMinTemp(day).main.temp}
@@ -34,19 +38,6 @@ const WeatherPage = ({city, icon, temperature, changeCity, forecast, ...props}) 
                 </Fragment>
 
             ))};
-            {chunkedForecast.map((day, i) => (
-                <Fragment key={i}>
-                <WeekForecast
-                time='6am'
-                temperature={temperature}
-                date={day[0].dt} 
-                icon={day[0].weather[0].icon}
-                maxTemp={getMaxTemp(day).main.temp}
-                minTemp={getMinTemp(day).main.temp}
-                />
-                </Fragment>
-            ))
-            };
             <Link to="/complain"><ComplaintLink /></Link>
         </div>
     )
