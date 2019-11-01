@@ -1,9 +1,7 @@
 import React from 'react';
 
-const label = () => {
-    return (
-        <label>Enter your details</label>
-    )
-}
+const Label = props => {
+  return <label>{props.children}</label>;
+};
 
-export default label;
+export default Label;

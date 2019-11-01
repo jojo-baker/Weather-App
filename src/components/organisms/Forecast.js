@@ -20,7 +20,7 @@ import { chunkify } from '../../utils';
 
 const Forecast = ({ forecast, ...props }) => {
     // Take forecast and split into equal chunks for each day.
-    const chunkedForecast = chunkify(forecast, forecast.length / 5);
+    const chunkedForecast = chunkify(forecast, forecast.length / 7);
   
     // Get highest temp from forecast chunk
     const getMaxTemp = array =>
