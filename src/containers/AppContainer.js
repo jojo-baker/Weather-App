@@ -77,7 +77,7 @@ class AppContainer extends Component {
             return (
             <WeatherPage
               city={this.state.city}
-              temperature={this.state.temperature}
+              temperature={`${this.state.temperature} º`}
               forecast={this.state.forecast}
               changeCity={this.changeCity}
             />
@@ -89,7 +89,7 @@ class AppContainer extends Component {
             return (
             <ComplaintPage
               city={this.state.city}
-              temperature={this.state.temperature}
+              temperature={`${this.state.temperature} º`}
               changeCity={this.changeCity}
             />
             );

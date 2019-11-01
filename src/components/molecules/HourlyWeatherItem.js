@@ -1,16 +1,16 @@
 import React from 'react';
 import WeatherIcon from '../atoms/WeatherIcon';
 
-const HourlyUpdate = ({icon, temperature, time, ...props}) => {
+const HourlyWeatherItem = ({icon, maxTemp, time, ...props}) => {
     return (
         <>
         <ul>
            <li>{time}</li>
            <li><WeatherIcon icon={icon}/></li>
-           <li>{temperature}</li>
+           <li>{maxTemp}</li>
         </ul>
         </>
     )
 }
 
-export default HourlyUpdate;
+export default HourlyWeatherItem;
