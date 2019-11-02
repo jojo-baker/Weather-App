@@ -20,7 +20,7 @@ import { chunkify } from '../../utils';
 
 const Forecast = ({ forecast, ...props }) => {
     // Take forecast and split into equal chunks for each day.
-    const chunkedForecast = chunkify(forecast, forecast.length / 7);
+    const chunkedForecast = chunkify(forecast, forecast.length / 5);
   
     // Get highest temp from forecast chunk
     const getMaxTemp = array =>
@@ -37,7 +37,7 @@ const Forecast = ({ forecast, ...props }) => {
             {i === 1 && <h2>Upcoming:</h2>}
             <DailyWeather
               key={day[0].dt}
-              date={day[0].dt}
+              day={day[0].dt_txt}
             //   icon={day[0].weather[0].icon}
             //   icon="http://openweathermap.org/img/w/" + day[0].weather[0].icon + ".png' alt=''>"
               icon={`http://openweathermap.org/img/wn/${day[0].weather[0].icon}.png`}

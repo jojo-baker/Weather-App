@@ -4,6 +4,7 @@ import HourlyWeather from './HourlyWeather';
 import moment from 'moment';
 
 const DailyWeather = ({day, icon,list, maxTemp, minTemp, ...props}) => {
+    console.log(moment(day).format('dddd'))
     return (
         <div>
             <h3>{moment(day).format('dddd')}</h3>
