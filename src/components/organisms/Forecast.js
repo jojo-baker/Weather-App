@@ -2,21 +2,6 @@ import React, { Fragment } from 'react';
 import DailyWeather from '../molecules/DailyWeather';
 import { chunkify } from '../../utils';
 
-// const Forecast = ({day, icon, maxTemp, minTemp, time, ...props}) => {
-//     return (
-//         <div>
-//             <h3>Today:</h3>
-//             <DailyWeather day={day} icon={icon} maxTemp={maxTemp} minTemp={minTemp} />
-//             <h3>Upcoming:</h3>
-//             <DailyWeather day={day} icon={icon} maxTemp={maxTemp} minTemp={minTemp}/>
-//             <DailyWeather day={day} icon={icon} maxTemp={maxTemp} minTemp={minTemp} />
-//             <DailyWeather day={day} icon={icon} maxTemp={maxTemp} minTemp={minTemp} />
-//             <DailyWeather day={day} icon={icon} maxTemp={maxTemp} minTemp={minTemp} />
-//             <DailyWeather day={day} icon={icon} maxTemp={maxTemp} minTemp={minTemp} />
-//             <DailyWeather day={day} icon={icon} maxTemp={maxTemp} minTemp={minTemp} />
-//         </div>
-//     )
-// }
 
 const Forecast = ({ forecast, ...props }) => {
     // Take forecast and split into equal chunks for each day.

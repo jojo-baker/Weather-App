@@ -2,7 +2,7 @@ import React from 'react'
 
 const RegretLink = () => {
     return (
-        <a href="#">I regret this, take me back.</a>
+        'I regret this, take me back.'
     )
 }
 
