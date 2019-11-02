@@ -11,6 +11,8 @@ class ComplaintForm extends Component {
       name: '',
       email: '',
       message: '',
+      showDialogue: false,
+      submitSuccess: false,
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -28,6 +30,7 @@ class ComplaintForm extends Component {
   }
 
   handleSubmit(event) {
+    // console.log('submit clicked', this.state)
     event.preventDefault();
 
     fetch('https://jsonplaceholder.typicode.com/posts', {
@@ -41,30 +44,50 @@ class ComplaintForm extends Component {
         'Content-type': 'application/json; charset=UTF-8'
       }
     })
-      .then(response => response.json())
-      .then(json => {
-        console.log(json);
-        this.setState({ name: '', email: '', message: '' });
-        // const getAlert = () => (
+      .then(response => {
+        if (response.status === 404) {
+          this.setState({ submitSuccess: false })
+        }
+        else { this.setState({ submitSuccess: true }) }
 
-        // )
+        console.log('response', this.state);
+        return response.json()
+      })
+      .then(json => {
+        console.log('sajdas', json);
+        this.setState({ name: '', email: '', message: '', showDialogue: true });
       })
       .catch(err => {
-        console.log(err);
+        console.log('error', err);
       });
   }
 
+  handleDialogue() {
+    this.setState({ showDialogue: false })
+  }
+
   render() {
-  return (
-    <div>
-      <form onSubmit={this.handleSubmit}>
-        <FormField type="text" name="name" label="Name" value={this.state.name} onChange={this.handleChange}/>
-        <FormField type="text" name="email" label="Email Address" value={this.state.email} onChange={this.handleChange}/>
-        <FormField type="textarea" name="message" label="Message" value={this.state.message} onChange={this.handleChange}/>
-        <Button>Submit</Button>
-      </form>
+    const form = <form onSubmit={this.handleSubmit}>
+      <FormField type="text" name="name" label="Name" value={this.state.name} onChange={this.handleChange} />
+      <FormField type="text" name="email" label="Email Address" value={this.state.email} onChange={this.handleChange} />
+      <FormField type="textarea" name="message" label="Message" value={this.state.message} onChange={this.handleChange} />
+      <Button>Submit</Button>
+    </form>
+
+  
+    const successMessage = <p>Form has been submitted.</p>
+    const failureMessage = <p>Form has not been submitted, try again.</p>
+
+    const dialogue = <div>
+      {this.state.submitSuccess === true ? successMessage : failureMessage}
+      <button onClick={() => this.handleDialogue()}>Ok</button>
     </div>
-  );
+
+    return (
+      <div>
+        {this.state.showDialogue === false ? form : dialogue}
+      </div>
+    );
   }
 };
 

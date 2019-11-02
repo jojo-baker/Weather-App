@@ -27,16 +27,16 @@ class AppContainer extends Component {
       fetch(`${API_URL}/weather?q=${this.state.city}&units=metric&appid=${process.env.REACT_APP_API_KEY}
       `) // Call the fetch function passing the url of the API as a parameter
         .then((response) => {
-          console.log(response);
+          // console.log(response);
           return response.json();
         // Your code for handling the data you get from the API
       })
         .then((data) => {
-          console.log(data);
+          // console.log(data);
           this.setState({ temperature:data.main.temp })
         })
     .catch(function(err) {
-      console.error(err);
+      console.error('error', err);
     // This is where you run code if the server returns any errors
     });
     }
