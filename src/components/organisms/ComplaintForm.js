@@ -45,6 +45,9 @@ class ComplaintForm extends Component {
       .then(json => {
         console.log(json);
         this.setState({ name: '', email: '', message: '' });
+        // const getAlert = () => (
+
+        // )
       })
       .catch(err => {
         console.log(err);

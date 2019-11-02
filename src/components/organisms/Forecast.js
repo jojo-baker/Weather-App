@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import DailyWeather from '../molecules/DailyWeather';
 import { chunkify } from '../../utils';
-
+import PropTypes from 'prop-types';
 
 const Forecast = ({ forecast, ...props }) => {
     // Take forecast and split into equal chunks for each day.
@@ -35,5 +35,18 @@ const Forecast = ({ forecast, ...props }) => {
       </div>
     );
   };
+
+Forecast.propTypes = {
+  forecast:PropTypes.arrayOf(PropTypes.shape({
+    dt: PropTypes.number.isRequired,
+    main: PropTypes.shape({
+      temp: PropTypes.number.isRequired,
+    }).isRequired,
+    weather: PropTypes.arrayOf(PropTypes.shape({
+      icon: PropTypes.string.isRequired,
+    })).isRequired,
+  })).isRequired
+
+ } 
 
 export default Forecast;
