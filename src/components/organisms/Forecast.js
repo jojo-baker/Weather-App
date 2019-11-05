@@ -23,9 +23,8 @@ const Forecast = ({ forecast, ...props }) => {
             <DailyWeather
               key={day[0].dt}
               day={day[0].dt_txt}
-            //   icon={day[0].weather[0].icon}
-            //   icon="http://openweathermap.org/img/w/" + day[0].weather[0].icon + ".png' alt=''>"
-              icon={`http://openweathermap.org/img/wn/${day[0].weather[0].icon}.png`}
+              icon={day[0].weather[0].icon}
+              // icon={`http://openweathermap.org/img/wn/${day[0].weather[0].icon}.png`}
               maxTemp={`${getMaxTemp(day).main.temp} º`}
               minTemp={`${getMinTemp(day).main.temp} º`}
               list={day}
