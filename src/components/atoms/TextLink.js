@@ -1,10 +1,9 @@
 import React from 'react';
+import './TextLink.css';
 
 const TextLink = ({ onButtonClick, ...props }) => {
     return (
-      <div>
-        <button onClick={onButtonClick}>{props.children}</button>
-      </div>
+        <div className="TextLink" onClick={onButtonClick}>{props.children}</div>
     );
   };
 

@@ -1,0 +1,8 @@
+.TextLink {
+    color: white;
+    text-decoration: underline;
+    font-size: 10pt;
+    font-weight: 300;
+    text-align: center;
+    cursor: pointer;
+}

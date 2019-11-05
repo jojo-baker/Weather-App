@@ -25,8 +25,8 @@ const Forecast = ({ forecast, ...props }) => {
               day={day[0].dt_txt}
               icon={day[0].weather[0].icon}
               // icon={`http://openweathermap.org/img/wn/${day[0].weather[0].icon}.png`}
-              maxTemp={`${getMaxTemp(day).main.temp} º`}
-              minTemp={`${getMinTemp(day).main.temp} º`}
+              maxTemp={`${parseInt(getMaxTemp(day).main.temp)} º`}
+              minTemp={`${parseInt(getMinTemp(day).main.temp)} º`}
               list={day}
             />
           </Fragment>

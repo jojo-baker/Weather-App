@@ -10,7 +10,7 @@ const ComplaintPage = ({firstname, lastname, bio, city, temperature, changeCity,
         <div>
             <PageTemplate city={city} temperature={temperature} changeCity={changeCity} />
             <Link to="/"><RegretLink /></Link>
-            <WeatherPerson firstname="Clive" lastname="Weathers" bio="Here is the Weather Person's bio" avatar="/avatar.png"/>
+            <WeatherPerson firstname="Clive" lastname="Weathers" bio="Here is the Weather Person's bio" avatar="/static/portrait-man.jpg"/>
             <h1>Make a Complaint</h1>
             <ComplaintForm />
         </div>

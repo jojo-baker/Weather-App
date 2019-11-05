@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import './CurrentTemperature.css';
 
 const CurrentTemperature = ({temperature, ...props}) => {
     return (
-        <div>{temperature}</div>
+        <div className="CurrentTemperature">{temperature}</div>
     )
 }
 

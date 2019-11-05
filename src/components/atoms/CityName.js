@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import './CityName.css';
 
 const CityName = ({city, ...props}) => {
     return (
-        <h1>{city}</h1>
+        <h1 className="CityName">{city}</h1>
     )
 }
 

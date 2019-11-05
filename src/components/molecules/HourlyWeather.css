@@ -1,0 +1,23 @@
+.HourlyWeather {
+    display: flex;
+    justify-content: space-around;
+    width: auto;
+    background-color: #381677;
+    flex-flow: row || nowrap;
+}
+
+.HWList {
+    display: flex;
+    /* width: auto; */
+    padding-block-start: 15px;
+    padding-block-end: 15px;
+    justify-content: space-around;
+
+}
+
+.HWList li {
+    /* display: block; */
+    list-style: none;
+    text-align: center;
+    justify-content: space-around;
+}

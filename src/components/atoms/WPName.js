@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './WPName.css';
 
 const WPName = ({firstname, lastname, ...props}) => {
     return (
-        <div>{firstname} {lastname}</div>
+        <p className="WPName">{firstname} {lastname}</p>
     )
 }
 
