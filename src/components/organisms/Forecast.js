@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import DailyWeather from '../molecules/DailyWeather';
 import { chunkify } from '../../utils';
 import PropTypes from 'prop-types';
@@ -14,6 +14,8 @@ const Forecast = ({ forecast, ...props }) => {
     // Get lowest temp from forecast chunk
     const getMinTemp = array =>
       array.reduce((acc, cur) => (acc.main.temp < cur.main.temp ? acc : cur));
+
+    const [showHourly, setShowHourly] = useState(0);
   
     return (
       <div class="Forecast">
@@ -29,6 +31,8 @@ const Forecast = ({ forecast, ...props }) => {
               maxTemp={`${parseInt(getMaxTemp(day).main.temp)}º`}
               minTemp={`${parseInt(getMinTemp(day).main.temp)}º`}
               list={day}
+              onDailyClick={() => setShowHourly(i)}
+              showHourly={showHourly === i}
             />
           </Fragment>
         ))}

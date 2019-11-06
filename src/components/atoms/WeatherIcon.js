@@ -44,52 +44,5 @@ import { WiDaySunny, WiNightClear, WiDayCloudy, WiNightAltCloudy, WiCloud, WiRai
     }  
 
   
-// class WeatherIcon extends React.Component {
-
-//     constructor(props) {
-//         super(props);
-
-//         this.state = {
-//             icon: ''
-//         }
-//     }
-
-//     render() {
-
-//         const icons = {
-//             "01d": WiDaySunny,
-//             "01n": WiNightClear,
-//         }
-
-//         const iconCode = icons[this.props.icon]
-//         // ({ icon, ...props }) => {
-            
-//         //     icon = icons[iconCode];
-
-//         //     if (icon === '01d') {
-//         //         return <WiDaySunny />
-//         //     }
-//         // }
-//         console.log('iconCode =', iconCode);
-
-//           return (
-//               <iconCode />
-//           )
-//       }
-//   }
-  
-
-//   // const WeatherIcon = ({icon, ...props}) => {
-
-// //     return (
-// //         <div>
-// //            {icon}
-// //            <WiDaySunny />
-// //            <WiNightClear />
-            
-// //         </div>
-// //     )
-// // }
-  
 
 export default WeatherIcon;

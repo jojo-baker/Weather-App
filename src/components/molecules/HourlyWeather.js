@@ -12,9 +12,7 @@ const HourlyWeather = ({ list, ...props }) => {
               <HourlyWeatherItem
                 key={item.dt}
                 time={moment(item.dt_txt).format('ha')}
-                // time={item.dt}
                 icon={item.weather[0].icon}
-                // icon={`http://openweathermap.org/img/wn/${item.weather[0].icon}.png`}
                 maxTemp={`${parseInt(item.main.temp_max)}º`}
               />
             ))}
