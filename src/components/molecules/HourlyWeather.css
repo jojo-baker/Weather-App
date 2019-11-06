@@ -1,23 +1,30 @@
 .HourlyWeather {
     display: flex;
-    justify-content: space-around;
-    width: auto;
     background-color: #381677;
-    flex-flow: row || nowrap;
+    margin: 20px -10px;
+    border: 2px solid green;
 }
 
 .HWList {
     display: flex;
-    /* width: auto; */
-    padding-block-start: 15px;
-    padding-block-end: 15px;
-    justify-content: space-around;
+    border: 2px solid pink;
+    width: 100%;
+    padding: 20px;
+}
 
+.HWList ul {
+    display: flex;
+    /* flex-direction: column; */
+    padding-inline-start: 0px;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid yellow;
+    width: 100%;
 }
 
 .HWList li {
-    /* display: block; */
     list-style: none;
     text-align: center;
-    justify-content: space-around;
+    border: 2px solid red;
 }
