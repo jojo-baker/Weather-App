@@ -2,14 +2,12 @@
     display: flex;
     background-color: #381677;
     margin: 20px -10px;
-    border: 2px solid green;
 }
 
 .HWList {
     display: flex;
-    border: 2px solid pink;
     width: 100%;
-    padding: 20px;
+    padding: 10px;
 }
 
 .HWList ul {
@@ -19,12 +17,10 @@
     align-content: center;
     align-items: center;
     justify-content: center;
-    border: 2px solid yellow;
     width: 100%;
 }
 
 .HWList li {
     list-style: none;
     text-align: center;
-    border: 2px solid red;
 }

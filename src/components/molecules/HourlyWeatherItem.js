@@ -6,9 +6,11 @@ const HourlyWeatherItem = ({icon, maxTemp, time, ...props}) => {
     return (
         <>
         <ul>
-           <li class="hourlytime">{time}</li>
-           <li class="hourlyicon"><WeatherIcon icon={icon}/></li>
-           <li class="hourlytemp">{maxTemp}</li>
+           <li>
+           <div class="hourlytime">{time}</div>
+           <div class="hourlyicon"><WeatherIcon icon={icon}/></div>
+           <div class="hourlytemp">{maxTemp}</div>
+           </li>
         </ul>
         </>
     )
