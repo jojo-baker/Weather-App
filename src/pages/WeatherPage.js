@@ -3,16 +3,16 @@ import PageTemplate from '../components/templates/PageTemplate';
 import Forecast from '../components/organisms/Forecast';
 import { Link } from 'react-router-dom';
 import TextLink from '../components/atoms/TextLink';
-import '../components/atoms/TextLink.css';
+import './Page.css';
 
 
-const WeatherPage = ({ city, temperature, changeCity, forecast, ...props }) => {
+const WeatherPage = ({ city, temperature, changeCity, forecast, linkType, ...props }) => {
     return (
       <PageTemplate city={city} temperature={temperature} changeCity={changeCity}>
         <Forecast forecast={forecast} />
-        <p>Don't like the weather?</p>
+        <p class="complaintblurb">Don't like the weather?</p>
         <Link to="/complain">
-          <TextLink className="TextLink">Complain to the weather person!</TextLink>
+          <TextLink linkType="complaintlink">Complain to the weather person!</TextLink>
         </Link>
       </PageTemplate>
     );

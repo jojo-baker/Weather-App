@@ -11,8 +11,8 @@ const DailyWeather = ({day, icon,list, maxTemp, minTemp, onDailyClick,showHourly
                 <h3 class="DWtitle">{moment(day).format('dddd')}</h3>
                     <div class="DWtempblock">
                         <div class="DWicon"><WeatherIcon icon={icon}/>&nbsp;</div>
-                        <div class="DWmaxmin"><b>{maxTemp}</b>&nbsp;</div>
-                        <div class="DWmaxmin">{minTemp}</div>
+                        <div class="DWmaxmin"><b>{maxTemp}<sup>º</sup></b>&nbsp;</div>
+                        <div class="DWmaxmin">{minTemp}<sup>º</sup></div>
                     </div>
             </div>
             {showHourly && <HourlyWeather list={list} />}

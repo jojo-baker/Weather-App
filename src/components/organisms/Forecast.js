@@ -27,9 +27,8 @@ const Forecast = ({ forecast, ...props }) => {
               key={day[0].dt}
               day={day[0].dt_txt}
               icon={day[0].weather[0].icon}
-              // icon={`http://openweathermap.org/img/wn/${day[0].weather[0].icon}.png`}
-              maxTemp={`${parseInt(getMaxTemp(day).main.temp)}º`}
-              minTemp={`${parseInt(getMinTemp(day).main.temp)}º`}
+              maxTemp={`${parseInt(getMaxTemp(day).main.temp)}`}
+              minTemp={`${parseInt(getMinTemp(day).main.temp)}`}
               list={day}
               onDailyClick={() => setShowHourly(i)}
               showHourly={showHourly === i}

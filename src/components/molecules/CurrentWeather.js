@@ -3,10 +3,9 @@ import CityName from '../atoms/CityName';
 import TextLink from '../atoms/TextLink';
 import CurrentTemperature from '../atoms/CurrentTemperature';
 // import RandoBox from '../atoms/RandoBox';
-import '../atoms/TextLink.css';
 import './CurrentWeather.css';
 
-const CurrentWeather = ({city, temperature, onTextLinkClick, ...props}) => {
+const CurrentWeather = ({city, temperature, onTextLinkClick, linkType, ...props}) => {
     return (
         <>
             <div class="cityimage" style={{ backgroundImage: `url(/static/${city}.jpg)`, 
@@ -16,7 +15,7 @@ const CurrentWeather = ({city, temperature, onTextLinkClick, ...props}) => {
             }}>
                 <div class="currentweather">
                     <CityName city={city}/>
-                    <TextLink class="TextLink" onButtonClick={onTextLinkClick}>Change</TextLink>
+                    <TextLink linkType="changecitylink" onButtonClick={onTextLinkClick}>Change</TextLink>
                     <CurrentTemperature temperature={temperature} />
                     {/* <RandoBox /> */}
                     <div class="color-divider"></div>

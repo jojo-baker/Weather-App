@@ -9,7 +9,7 @@ const HourlyWeatherItem = ({icon, maxTemp, time, ...props}) => {
            <li>
            <div class="hourlytime">{time}</div>
            <div class="hourlyicon"><WeatherIcon icon={icon}/></div>
-           <div class="hourlytemp">{maxTemp}</div>
+           <div class="hourlytemp">{maxTemp}<sup>º</sup></div>
            </li>
         </ul>
         </>

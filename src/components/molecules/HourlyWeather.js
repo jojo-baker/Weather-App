@@ -13,7 +13,7 @@ const HourlyWeather = ({ list, ...props }) => {
                 key={item.dt}
                 time={moment(item.dt_txt).format('ha')}
                 icon={item.weather[0].icon}
-                maxTemp={`${parseInt(item.main.temp_max)}º`}
+                maxTemp={`${parseInt(item.main.temp_max)}`}
               />
             ))}
           </ul>

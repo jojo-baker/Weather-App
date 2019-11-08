@@ -3,7 +3,7 @@ import './CurrentTemperature.css';
 
 const CurrentTemperature = ({temperature, ...props}) => {
     return (
-        <div className="CurrentTemperature">{temperature}</div>
+        <div className="CurrentTemperature">{temperature}<sup>º</sup></div>
     )
 }
 
