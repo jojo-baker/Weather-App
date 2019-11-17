@@ -4,7 +4,7 @@ import './WPName.css';
 
 const WPName = ({firstname, lastname, ...props}) => {
     return (
-        <p className="WPName">{firstname} {lastname}</p>
+        <p className="WPName"><b>{firstname}</b> {lastname}</p>
     )
 }
 

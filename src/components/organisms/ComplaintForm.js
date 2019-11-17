@@ -75,7 +75,7 @@ class ComplaintForm extends Component {
     </form>
 
   
-    const successMessage = <p>Form has been submitted.</p>
+    const successMessage = <p>We’ve received your complaint, unfortunately we have no control of the weather, we merely report on it. As such, your complaint has been sent straight to our junk mail folder.</p>
     const failureMessage = <p>Form has not been submitted, try again.</p>
 
     const dialogue = <div>
