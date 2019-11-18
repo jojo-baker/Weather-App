@@ -7,11 +7,12 @@
 .DWtempblock {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     padding-right: 15px;
 }
 
 .DWtitle {
-    font-size: 25pt;
+    font-size: 25px;
     margin: 0px;
     padding-left: 15px;
 }
@@ -23,6 +24,12 @@
 }
 
 .DWmaxmin {
-    font-size: 30pt;
+    font-size: 30px;
 
 }
+
+/* .daily-weather {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
